@@ -21,8 +21,60 @@
     <div class="container my-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-          <h5>Request submited</h5>
+          
+          <form action="/find/allocation" method="post">
+            <h5>Set Max Allocation</h5>
+            <div class="row mb-4">
+              <div class="col">
+                <label for="base2">Base 2</label>
+                <input
+                  type="text"
+                  name="base2Max"
+                  id="base2"
+                  class="form-control"
+                />
+              </div>
+              <div class="col">
+                <label for="base1">Base 1</label>
+                <input
+                  type="text"
+                  name="base1Max"
+                  id="base1"
+                  class="form-control"
+                />
+              </div>
+              <div class="col">
+                <label for="ground">Ground</label>
+                <input
+                  type="text"
+                  name="groundMax"
+                  id="ground"
+                  class="form-control"
+                />
+              </div>
+              <div class="col">
+                <label for="floor1">Floor 1</label>
+                <input
+                  type="text"
+                  name="floor1Max"
+                  id="floor1"
+                  class="form-control"
+                />
+              </div>
+              <div class="col">
+                <label for="floor2">Floor 2</label>
+                <input
+                  type="text"
+                  name="floor2Max"
+                  id="floor2"
+                  class="form-control"
+                />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary px-4">Find Allocation</button>
+          </form>
           <hr />
+          <h5>Request submited</h5>
           <table class="table">
             <thead>
               <tr>
