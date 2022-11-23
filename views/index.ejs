@@ -93,4 +93,26 @@
       </div>
     </div>
   </body>
+  <script>
+    (() => {
+      const firstChoice   = document.getElementById("first-choice");
+      const secondChoice  = document.getElementById("second-choice");
+      const thirdChoice   = document.getElementById("third-choice");
+
+      firstChoice.addEventListener("change", ({ target: {selectedIndex} }) => {
+        secondChoice.options[selectedIndex].disabled = true;
+        thirdChoice.options[selectedIndex].disabled = true;
+      });
+
+      secondChoice.addEventListener("change", ({ target: {selectedIndex} }) => {
+        firstChoice.options[selectedIndex].disabled = true;
+        thirdChoice.options[selectedIndex].disabled = true;
+      });
+
+      thirdChoice.addEventListener("change", ({ target: {selectedIndex} }) => {
+        firstChoice.options[selectedIndex].disabled = true;
+        secondChoice.options[selectedIndex].disabled = true;
+      });
+    })();
+  </script>
 </html>
